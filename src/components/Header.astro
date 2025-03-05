@@ -1,5 +1,12 @@
 ---
 import MenuIcon from "./svg/MenuIcon.astro";
+import HeroImage from "../assets/Van3.jpg";
+import fmcsaSVG from "../assets/fmcsa.svg";
+import LogoSVG from "../assets/logo.svg";
+import { getImage } from "astro:assets";
+const bgImage = await getImage({ src: HeroImage });
+
+// const backgroundUrl = `url(${HeroImage.src})`;
 ---
 
 <>
@@ -8,7 +15,7 @@ import MenuIcon from "./svg/MenuIcon.astro";
       <div class="menu-container">
         <a href="#" class="flex flex-col w-[30%]">
           <img
-            src="src/assets/Logo.svg"
+            src={LogoSVG.src}
             alt="Logo"
             width="100"
             class="logo"
@@ -47,8 +54,9 @@ import MenuIcon from "./svg/MenuIcon.astro";
       <div class="text-hero">
         <h1>WE HAVE THE SOLUTION TO YOUR FREIGHT CHALLENGES</h1>
         <a href="#Quote" class="">OUR SERVICES</a>
-        <img src="src/assets/fmcsa.svg" alt="" class="fmcsa-logo" />
+        <img src={fmcsaSVG.src} alt="" class="fmcsa-logo" />
       </div>
+      <!-- <div style={`background-image: url(${bgImage.src});`}></div> -->
       <div class="bg-image"></div>
       <!-- <div class="image-container"> -->
       <!-- <img src="src/assets/Van.png" alt="" class="hero_image" /> -->
@@ -69,7 +77,8 @@ import MenuIcon from "./svg/MenuIcon.astro";
 
 <style>
   .bg-image {
-    background-image: url("src/assets/Van4.jpg");
+    background-image: url("/Van4.jpg");
+    /* background-image: var(--backgroundUrl) */
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;

@@ -1,0 +1,209 @@
+---
+
+---
+
+<>
+  <section class="" id="Services">
+    <div class="wrapper">
+      <h2 class="">EXPEDITED FREIGHT</h2>
+      <div class="container">
+        <div class="img-container">
+          <img src="src/assets/Van-model2.png" alt="" class="h-full" />
+        </div>
+        <div class="info-container">
+          <p class="text-service">
+            When time is of the essence, Wide Turn Logistics is your trusted
+            partner for fast, reliable, and efficient delivery.
+          </p>
+          <p class="text-service">
+            Our expedited freight service is designed to meet urgent deadlines
+            and customer demands, ensuring your shipments arrive exactly when
+            you need them-no delays, no excuses. Whether it's a last-minute
+            order or a time-sensitive delivery, we've got you covered with a
+            24-hour delivery timeframe across Florida.
+          </p>
+          <!-- <p class="font-semibold text-2xl text-text-primary">
+                Why Choose Wide Turn Logistics for Expedited Freight?
+              </p> -->
+          <div class="services-feautures">
+            <div class="flex flex-col items-center">
+              <img src="src/assets/speed.svg" alt="" width="50" height="50" />
+              <!-- <div class="bg-black w-[50px] h-[50px]"></div> -->
+              <p class="feature-title">Speed</p>
+              <p class="feaure-text">
+                Deliveries in as little <br /> as 24 hours within Florida.
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="src/assets/reliability.svg"
+                alt=""
+                width="50"
+                height="50"
+              />
+              <!-- <div class="bg-black w-[50px] h-[50px]"></div> -->
+              <p class="feature-title">Reliability</p>
+              <p class="feaure-text">
+                Real-time tracking and updates <br />for complete peace of mind.
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="src/assets/efficiency.svg"
+                alt=""
+                width="50"
+                height="50"
+              />
+              <!-- <div class="bg-black w-[50px] h-[50px]"></div> -->
+              <p class="feature-title">Efficiency</p>
+              <p class="feaure-text">
+                Less handling means reduced<br /> risk of damage or delays.
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="src/assets/flexibility.svg"
+                alt=""
+                width="50"
+                height="50"
+              />
+              <!-- <div class="bg-black w-[50px] h-[50px]"></div> -->
+              <p class="feature-title">Flexibility</p>
+              <p class="feaure-text">
+                Tailored solutions to meet <br />your unique shipping needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</>
+
+<style>
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .feature-title {
+    font-weight: 600;
+  }
+
+  .services-feautures {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    text-align: center;
+  }
+  .text-service {
+    font-size: 18px;
+    color: #2e2e2e;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1171a7;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+  .wrapper {
+    margin-inline: 20px;
+  }
+  .img-container {
+    width: 100%;
+    position: relative;
+  }
+  img {
+    width: 100%;
+  }
+  section {
+    padding-block: 40px;
+
+    overflow: hidden;
+  }
+  @media screen and (min-width: 800px) {
+    .wrapper {
+      margin-inline: 60px;
+    }
+    h2 {
+      font-size: 48px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .container {
+      display: grid;
+      /* flex-direction: row-reverse; */
+      grid-template-columns: 1fr 40%;
+      /* grid-template-columns: repeat(2, 1fr); */
+      grid-auto-rows: 1fr;
+      grid-auto-flow: dense;
+      /* justify-content: center; */
+      /* align-items: center; */
+      gap: 50px;
+      margin-top: 40px;
+      /* justify-content: stretch; */
+    }
+    .container > .img-container {
+      grid-column: 2;
+    }
+
+    .container > .info-container {
+      grid-row: 1;
+      grid-column: 1;
+    }
+    /* .info-container {
+      width: 50%;
+    }
+    .img-container {
+      width: 50%;
+      /* height: 50%; */
+    /* max-height: 100%; */
+    /* }  */
+    .img-container img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10%;
+      width: 150%;
+    }
+    .wrapper {
+      margin-inline: 80px;
+    }
+    h2 {
+      font-size: 56px;
+    }
+    .feaure-text,
+    .feature-title {
+      font-size: 18px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .wrapper {
+      margin-inline: 100px;
+    }
+
+    .text-service {
+      font-size: 24px;
+    }
+  }
+  @media screen and (min-width: 1600px) {
+    .wrapper {
+      margin-inline: 200px;
+    }
+    h2 {
+      font-size: 64px;
+    }
+    .text-service {
+      font-size: 32px;
+    }
+    .feaure-text,
+    .feature-title {
+      font-size: 24px;
+    }
+  }
+</style>

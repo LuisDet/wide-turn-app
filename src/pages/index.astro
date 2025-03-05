@@ -1,11 +1,38 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Header from "../components/Header.astro";
+import Services from "../components/Services.astro";
+import Quote from "../components/Quote.astro";
+import Specialize from "../components/Specialize.astro";
+// import Choice from "../components/Choice.astro";
+import About from "../components/About.astro";
+import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <Header />
+  <Services />
+  <Specialize />
+  <!-- <Choice /> -->
+  <Quote />
+  <About />
 </Layout>
+
+<style>
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #f6f6f6;
+    font-family: Roboto, "Open Sans", sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

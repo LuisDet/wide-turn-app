@@ -1,0 +1,157 @@
+---
+
+---
+
+<>
+  <section id="about">
+    <div class="container">
+      <div class="about-container">
+        <div class="about">
+          <h2 class="">ABOUT US</h2>
+          <p class="">
+            Your Trusted Partner in Freight and Transportation
+            <br />
+            <br />
+            At Wide Turn Logistics, we're more than just a trucking company we're
+            your reliable partner in moving goods efficiently, safely, and on time.
+            As a third-party freight service provider, we specialize in truckload
+            services, specialized cargo transport, and dedicated fleet solutions,
+            ensuring your shipments reach their destination with care and precision.
+            <br />
+            <br />
+            Based in Florida, we're proud to serve local businesses and regional
+            partners with a focus on dry van loads, expedited shipping, and box truck
+            freight. While we're just starting our journey, our commitment to excellence,
+            customer satisfaction, and innovative logistics solutions sets us apart.
+          </p>
+        </div>
+      </div>
+      <div class="choice-section">
+        <h2>WHY TO CHOICE US</h2>
+        <div class="choise-container">
+          <div class="choise-card">
+            <img src="src/assets/Modern_Fleet.svg" alt="" />
+            <p>MODERN CARGO FLEET</p>
+          </div>
+          <div class="choise-card">
+            <img src="src/assets/Safe_First.svg" alt="" />
+            <p>SAFETY FIRST CULTURE</p>
+          </div>
+          <div class="choise-card">
+            <img src="src/assets/Faster.svg" alt="" />
+            <p>FASTER DELIVERY TIMES</p>
+          </div>
+          <div class="choise-card">
+            <img src="src/assets/Satisfied_Customer.svg" alt="" />
+            <p>100% SATIFIED CUSTOMERS</p>
+          </div>
+          <div class="choise-card">
+            <img src="src/assets/Insured_Cargo.svg" alt="" />
+            <p>INSURANCE AND CARGO COVERAGE</p>
+          </div>
+          <div class="choise-card">
+            <img src="src/assets/Priority.svg" alt="" />
+            <p>PRIORITY HANDLING</p>
+          </div>
+          <div class="choise-card">
+            <img src="src/assets/Same_Day.svg" alt="" />
+            <p>SAME DAY DELIVERY</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</>
+
+<style>
+  section {
+    margin-top: 40px;
+    margin-inline: 20px;
+  }
+  h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1171a7;
+    text-align: center;
+    margin: 0;
+  }
+  .choice-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .choise-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: 20px;
+  }
+  .choise-card {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* max-width: calc(50% - 5px); */
+  }
+  .about-container {
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+  }
+  .about {
+    max-width: 550px;
+  }
+  .choise-card img {
+    height: 50px;
+  }
+
+  .choise-card p {
+    text-align: center;
+    margin: 0px;
+    font-size: 16px;
+  }
+  @media screen and (min-width: 800px) {
+    section {
+      margin-inline: 60px;
+    }
+    h2 {
+      font-size: 48px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 60px;
+      position: relative;
+    }
+    .container::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 3px;
+      background-color: #ccc;
+      border-radius: 50%;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    .about p {
+      /* text-align: center; */
+      align-self: center;
+      font-size: 24px;
+      /* place-self: center; */
+      /* width: calc(50% - 30px); */
+    }
+    .choise-section {
+      /* width: calc(50% - 30px); */
+    }
+  }
+</style>

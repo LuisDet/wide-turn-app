@@ -1,0 +1,96 @@
+---
+import Van from "../assets/Special Care Color Logo.png";
+---
+
+<>
+  <section id="about">
+    <div class="container">
+      <div class="about-container">
+        <div class="about">
+          <h2 class="">Special Care</h2>
+          <div class="info-container">
+            <img src={Van.src} alt="" class="img-van" />
+            <p class="">
+              In <span>Wide Turn Logistics</span>, we are committed to take
+              special care in transporting delicate goods, ensuring they arrive
+              safely, securely, and in optimal condition.
+              <br />
+              <br />
+              Our specialized handling processes, climate-controlled transport, and
+              secure packaging solutions guarantee the integrity of every shipment
+              solutions, ensuring your shipments reach their destination with care
+              and precision
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</>
+
+<style>
+  span {
+    color: #fcb900;
+  }
+  .img-van {
+    width: 60%;
+  }
+  .info-container {
+    display: flex;
+  }
+  section {
+    margin-top: 40px;
+    margin-inline: 20px;
+  }
+  h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1171a7;
+    text-align: center;
+    margin: 0;
+  }
+  .about p {
+    align-self: center;
+    font-size: clamp(16px, 2vw, 28px);
+  }
+  /* .about-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .about {
+    max-width: 550px;
+  } */
+  @media screen and (min-width: 800px) {
+    section {
+      margin-inline: 60px;
+    }
+    h2 {
+      font-size: 64px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    /* .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 60px;
+      position: relative;
+    } */
+    /* .container::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 3px;
+      background-color: #ccc;
+      border-radius: 50%;
+      left: 50%;
+      transform: translate(-50%);
+    } */
+
+    .choise-section {
+      /* width: calc(50% - 30px); */
+    }
+  }
+</style>

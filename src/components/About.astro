@@ -1,11 +1,5 @@
 ---
-import ModernFleet from "../assets/Modern_Fleet.svg";
-import SafeFirst from "../assets/Safe_First.svg";
-import Faster from "../assets/Faster.svg";
-import SatisfiedCustomer from "../assets/Satisfied_Customer.svg";
-import InsuredCargo from "../assets/Insured_Cargo.svg";
-import Priority from "../assets/Priority.svg";
-import SameDay from "../assets/Same_Day.svg";
+import Van from "../assets/AdobeStock_1139729176.png";
 ---
 
 <>
@@ -14,54 +8,24 @@ import SameDay from "../assets/Same_Day.svg";
       <div class="about-container">
         <div class="about">
           <h2 class="">ABOUT US</h2>
-          <p class="">
-            Your Trusted Partner in Freight and Transportation
-            <br />
-            <br />
-            At Wide Turn Logistics, we're more than just a trucking company we're
-            your reliable partner in moving goods efficiently, safely, and on time.
-            As a third-party freight service provider, we specialize in truckload
-            services, specialized cargo transport, and dedicated fleet solutions,
-            ensuring your shipments reach their destination with care and precision.
-            <br />
-            <br />
-            Based in Florida, we're proud to serve local businesses and regional
-            partners with a focus on dry van loads, expedited shipping, and box truck
-            freight. While we're just starting our journey, our commitment to excellence,
-            customer satisfaction, and innovative logistics solutions sets us apart.
-          </p>
-        </div>
-      </div>
-      <div class="choice-section">
-        <h2>WHY TO CHOICE US</h2>
-        <div class="choise-container">
-          <div class="choise-card">
-            <img src={ModernFleet.src} alt="" />
-            <p>MODERN CARGO FLEET</p>
-          </div>
-          <div class="choise-card">
-            <img src={SafeFirst.src} alt="" />
-            <p>SAFETY FIRST CULTURE</p>
-          </div>
-          <div class="choise-card">
-            <img src={Faster.src} alt="" />
-            <p>FASTER DELIVERY TIMES</p>
-          </div>
-          <div class="choise-card">
-            <img src={SatisfiedCustomer.src} alt="" />
-            <p>100% SATIFIED CUSTOMERS</p>
-          </div>
-          <div class="choise-card">
-            <img src={InsuredCargo.src} alt="" />
-            <p>INSURANCE AND CARGO COVERAGE</p>
-          </div>
-          <div class="choise-card">
-            <img src={Priority.src} alt="" />
-            <p>PRIORITY HANDLING</p>
-          </div>
-          <div class="choise-card">
-            <img src={SameDay.src} alt="" />
-            <p>SAME DAY DELIVERY</p>
+          <div class="info-container">
+            <p class="">
+              Your Trusted Partner in Freight and Transportation.
+              <br />
+              <br />
+              At <span>Wide Turn Logistics</span>, we're more than just a
+              trucking company we're your reliable partner in moving goods
+              efficiently, safely, and on time. As a third-party freight service
+              provider, we specialize in truckload services, specialized cargo
+              transport, and dedicated fleet.
+              <br />
+              <br />
+              Based in Florida, we're proud to serve local businesses and regional
+              partners with a focus on dry van loads, expedited shipping, and box
+              truck freight. While we're just starting our journey, our commitment
+              to excellence, customer satisfaction, and innovative logistics solutions.
+            </p>
+            <img src={Van.src} alt="" class="img-van" />
           </div>
         </div>
       </div>
@@ -70,6 +34,15 @@ import SameDay from "../assets/Same_Day.svg";
 </>
 
 <style>
+  span {
+    color: #1171a7;
+  }
+  .img-van {
+    width: 60%;
+  }
+  .info-container {
+    display: flex;
+  }
   section {
     margin-top: 40px;
     margin-inline: 20px;
@@ -81,64 +54,36 @@ import SameDay from "../assets/Same_Day.svg";
     text-align: center;
     margin: 0;
   }
-  .choice-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
+  .about p {
+    align-self: center;
+    font-size: clamp(16px, 2vw, 28px);
   }
-  .choise-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* justify-content: center; */
-    /* align-items: center; */
-    gap: 20px;
-  }
-  .choise-card {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    /* max-width: calc(50% - 5px); */
-  }
-  .about-container {
+  /* .about-container {
     width: 100%;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
   }
   .about {
     max-width: 550px;
-  }
-  .choise-card img {
-    height: 50px;
-  }
-
-  .choise-card p {
-    text-align: center;
-    margin: 0px;
-    font-size: 16px;
-  }
+  } */
   @media screen and (min-width: 800px) {
     section {
       margin-inline: 60px;
     }
     h2 {
-      font-size: 48px;
+      font-size: 64px;
     }
   }
 
   @media screen and (min-width: 1000px) {
-    .container {
+    /* .container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 60px;
       position: relative;
-    }
-    .container::before {
+    } */
+    /* .container::before {
       content: "";
       position: absolute;
       height: 100%;
@@ -147,15 +92,8 @@ import SameDay from "../assets/Same_Day.svg";
       border-radius: 50%;
       left: 50%;
       transform: translate(-50%);
-    }
+    } */
 
-    .about p {
-      /* text-align: center; */
-      align-self: center;
-      font-size: 24px;
-      /* place-self: center; */
-      /* width: calc(50% - 30px); */
-    }
     .choise-section {
       /* width: calc(50% - 30px); */
     }

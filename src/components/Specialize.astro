@@ -2,27 +2,81 @@
 import ManufactureIcon from "./svg/ManufactureIcon.astro";
 import PillIcon from "./svg/PillIcon.astro";
 import StethoscopeIcon from "./svg/StethoscopeIcon.astro";
+import ModernFleetIcon from "./svg/ModernFleetIcon.astro";
+import SafeFirstIcon from "./svg/SafeFirstIcon.astro";
+import FasterIcon from "./svg/FasterIcon.astro";
+import SatisfiedCustomerIcon from "./svg/SatisfiedCustomerIcon.astro";
+import InsuredCargoIcon from "./svg/InsuredCargoIcon.astro";
+import PriorityIcon from "./svg/PriorityIcon.astro";
+import SameDayIcon from "./svg/SameDayIcon.astro";
+
+import Van from "../assets/bg-2.jpg";
+import { getImage } from "astro:assets";
+const bgImage = await getImage({ src: Van, format: "jpg" });
 ---
 
 <>
   <section>
+    <div class="bg-2" style={`background-image: url(${bgImage.src});`}></div>
     <div class="wrapper">
-      <h2 class="">WE SPECIALIZE</h2>
-      <div class="card-container">
-        <div class="card">
-          <StethoscopeIcon width={"100"} fill="#FCB900" />
-          <!-- <img src="src/assets/flexibility.svg" alt="" width="100" /> -->
-          <p class="card-info">Health Care</p>
+      <div class="choice-section">
+        <h2>YOUR BEST CHOICE, EVERY TIME</h2>
+        <div class="choise-container">
+          <div class="choise-card">
+            <ModernFleetIcon heigth="50" fill="#fff" />
+            <!-- <img src={ModernFleet.src} alt="" /> -->
+            <p>MODERN CARGO FLEET</p>
+          </div>
+          <div class="choise-card">
+            <SafeFirstIcon heigth="50" fill="#fff" />
+            <!-- <img src={SafeFirst.src} alt="" /> -->
+            <p>SAFETY FIRST CULTURE</p>
+          </div>
+          <div class="choise-card">
+            <FasterIcon heigth="50" fill="#fff" />
+            <!-- <img src={Faster.src} alt="" /> -->
+            <p>FASTER DELIVERY TIMES</p>
+          </div>
+          <div class="choise-card">
+            <SatisfiedCustomerIcon heigth="50" fill="#fff" />
+            <!-- <img src={SatisfiedCustomer.src} alt="" /> -->
+            <p>100% SATIFIED CUSTOMERS</p>
+          </div>
+          <div class="choise-card">
+            <InsuredCargoIcon heigth="50" fill="#fff" />
+            <!-- <img src={InsuredCargo.src} alt="" /> -->
+            <p>INSURANCE AND CARGO COVERAGE</p>
+          </div>
+          <div class="choise-card">
+            <PriorityIcon heigth="50" fill="#fff" />
+            <!-- <img src={Priority.src} alt="" /> -->
+            <p>PRIORITY HANDLING</p>
+          </div>
+          <div class="choise-card">
+            <SameDayIcon heigth="50" fill="#fff" />
+            <!-- <img src={SameDay.src} alt="" /> -->
+            <p>SAME DAY DELIVERY</p>
+          </div>
         </div>
-        <div class="card">
-          <PillIcon width="100" fill="#FCB900" />
-          <!-- <img src="src/assets/flexibility.svg" alt="" width="100" /> -->
-          <p class="card-info">Medical</p>
-        </div>
-        <div class="card">
-          <ManufactureIcon width="100" fill="#FCB900" />
-          <!-- <img src="src/assets/flexibility.svg" alt="" width="100" /> -->
-          <p class="card-info">Manufacturing</p>
+      </div>
+      <div class="serve-section">
+        <h2 class="">INDUSTRIES WE SERVE</h2>
+        <div class="card-container">
+          <div class="card">
+            <StethoscopeIcon width="50" fill="#FCB900" />
+            <!-- <img src="src/assets/flexibility.svg" alt="" width="100" /> -->
+            <p class="card-info">HealthCare</p>
+          </div>
+          <div class="card">
+            <PillIcon width="50" fill="#FCB900" />
+            <!-- <img src="src/assets/flexibility.svg" alt="" width="100" /> -->
+            <p class="card-info">Medical</p>
+          </div>
+          <div class="card">
+            <ManufactureIcon width="50" fill="#FCB900" />
+            <!-- <img src="src/assets/flexibility.svg" alt="" width="100" /> -->
+            <p class="card-info">Manufacturing</p>
+          </div>
         </div>
       </div>
     </div>
@@ -30,9 +84,53 @@ import StethoscopeIcon from "./svg/StethoscopeIcon.astro";
 </>
 
 <style>
+  .choice-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .choise-card p {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+  }
+  .choise-card {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .choise-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .choise-card img {
+    height: 50px;
+  }
+  .serve-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .bg-2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-height: 100%;
+    height: 900px;
+    position: absolute;
+    z-index: -1;
+  }
   .card-info {
-    font-size: 28px;
+    font-size: 18px;
     font-weight: 600;
+    margin: 0;
     text-align: center;
   }
   .card {
@@ -40,8 +138,9 @@ import StethoscopeIcon from "./svg/StethoscopeIcon.astro";
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-inline: 88px;
-    padding-block: 32px;
+    gap: 10px;
+    padding-inline: 20px;
+    padding-block: 15px;
     background-color: white;
     border-radius: 10px;
     /* border: 1px solid #ccc; */
@@ -51,21 +150,33 @@ import StethoscopeIcon from "./svg/StethoscopeIcon.astro";
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
     place-content: center;
-    margin-top: 40px;
+    /* margin-top: 40px; */
   }
   .wrapper {
     margin-inline: 20px;
+    max-width: 50%;
+    padding-block: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    /* flex-direction: column; */
+
+    /* max-width: calc(100% - 50%); */
   }
   h2 {
     font-size: 36px;
     font-weight: 800;
-    color: #1171a7;
+    color: #fff;
     text-align: center;
     margin: 0;
   }
   section {
-    padding-block: 40px;
-    padding-bottom: 80px;
+    display: flex;
+    justify-content: end;
+    /* align-items: end; */
+    position: relative;
+    /* padding-block: 40px; */
+    /* padding-bottom: 80px; */
   }
   @media screen and (min-width: 800px) {
     .card-container {
@@ -139,7 +250,7 @@ import StethoscopeIcon from "./svg/StethoscopeIcon.astro";
 
   @media screen and (min-width: 1600px) {
     h2 {
-      font-size: 64px;
+      font-size: 48px;
     }
   }
 </style>

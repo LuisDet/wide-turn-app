@@ -54,8 +54,8 @@ const bgImage = await getImage({ src: HeroImage, format: "jpg" });
       <div class="text-hero">
         <h1>WE HAVE THE SOLUTION TO YOUR FREIGHT CHALLENGES</h1>
         <a href="#Quote" class="">OUR SERVICES</a>
-        <img src={fmcsaSVG.src} alt="" class="fmcsa-logo" />
       </div>
+      <img src={fmcsaSVG.src} alt="" class="fmcsa-logo" />
       <!-- <div class="image-container"> -->
       <div class="bg-image" style={`background-image: url(${bgImage.src});`}>
         <!-- <img src="src/assets/Van.png" alt="" class="hero_image" /> -->
@@ -140,7 +140,11 @@ const bgImage = await getImage({ src: HeroImage, format: "jpg" });
     }
 
     .fmcsa-logo {
-      width: 250px;
+      width: 180px;
+      height: 150px;
+      position: absolute;
+      bottom: 0;
+      right: 10%;
     }
 
     header {
@@ -396,8 +400,11 @@ const bgImage = await getImage({ src: HeroImage, format: "jpg" });
         /* right: -12%; */
       }
       .text-hero {
-        max-width: 50%;
-        gap: 80px;
+        max-width: 100%;
+        gap: 20px;
+      }
+      .text-hero h1 {
+        line-height: 80px;
       }
     }
 

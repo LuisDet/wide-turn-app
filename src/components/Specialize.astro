@@ -9,6 +9,7 @@ import SatisfiedCustomerIcon from "./svg/SatisfiedCustomerIcon.astro";
 import InsuredCargoIcon from "./svg/InsuredCargoIcon.astro";
 import PriorityIcon from "./svg/PriorityIcon.astro";
 import SameDayIcon from "./svg/SameDayIcon.astro";
+import ChoiceCard from "./card/ChoiceCard.astro";
 
 import Van from "../assets/bg-2.jpg";
 import { getImage } from "astro:assets";
@@ -22,41 +23,19 @@ const bgImage = await getImage({ src: Van, format: "jpg" });
       <div class="choice-section">
         <h2>YOUR BEST CHOICE, EVERY TIME</h2>
         <div class="choise-container">
-          <div class="choise-card">
-            <ModernFleetIcon heigth="50" fill="#fff" />
-            <!-- <img src={ModernFleet.src} alt="" /> -->
-            <p>MODERN CARGO FLEET</p>
-          </div>
-          <div class="choise-card">
-            <SafeFirstIcon heigth="50" fill="#fff" />
-            <!-- <img src={SafeFirst.src} alt="" /> -->
-            <p>SAFETY FIRST CULTURE</p>
-          </div>
-          <div class="choise-card">
-            <FasterIcon heigth="50" fill="#fff" />
-            <!-- <img src={Faster.src} alt="" /> -->
-            <p>FASTER DELIVERY TIMES</p>
-          </div>
-          <div class="choise-card">
-            <SatisfiedCustomerIcon heigth="50" fill="#fff" />
-            <!-- <img src={SatisfiedCustomer.src} alt="" /> -->
-            <p>100% SATIFIED CUSTOMERS</p>
-          </div>
-          <div class="choise-card">
-            <InsuredCargoIcon heigth="50" fill="#fff" />
-            <!-- <img src={InsuredCargo.src} alt="" /> -->
-            <p>INSURANCE AND CARGO COVERAGE</p>
-          </div>
-          <div class="choise-card">
-            <PriorityIcon heigth="50" fill="#fff" />
-            <!-- <img src={Priority.src} alt="" /> -->
-            <p>PRIORITY HANDLING</p>
-          </div>
-          <div class="choise-card">
-            <SameDayIcon heigth="50" fill="#fff" />
-            <!-- <img src={SameDay.src} alt="" /> -->
-            <p>SAME DAY DELIVERY</p>
-          </div>
+          <ChoiceCard SourceMap={ModernFleetIcon} text={"MODERN CARGO FLEET"} />
+          <ChoiceCard SourceMap={SafeFirstIcon} text={"SAFETY FIRST CULTURE"} />
+          <ChoiceCard SourceMap={FasterIcon} text={"FASTER DELIVERY TIMES"} />
+          <ChoiceCard
+            SourceMap={SatisfiedCustomerIcon}
+            text={"100% SATIFIED CUSTOMERS"}
+          />
+          <ChoiceCard
+            SourceMap={InsuredCargoIcon}
+            text={"INSURANCE AND CARGO COVERAGE"}
+          />
+          <ChoiceCard SourceMap={PriorityIcon} text={"PRIORITY HANDLING"} />
+          <ChoiceCard SourceMap={SameDayIcon} text={"SAME DAY DELIVERY"} />
         </div>
       </div>
       <div class="serve-section">
@@ -91,26 +70,13 @@ const bgImage = await getImage({ src: Van, format: "jpg" });
     flex-direction: column;
     gap: 30px;
   }
-  .choise-card p {
-    color: #fff;
-    font-size: 16px;
-    text-align: center;
-  }
-  .choise-card {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
+
   .choise-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
   }
-  .choise-card img {
-    height: 50px;
-  }
+
   .serve-section {
     display: flex;
     flex-direction: column;

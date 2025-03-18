@@ -26,75 +26,68 @@
         </p>
         <a href="email:info@widelogistics.com"> info@widelogistics.com</a>
       </div>
-      <div class="flex justify-evenly items-center">
-        <div>
-          <!-- <div class="bg-white px-7 py-2.5 inline rounded-lg">
-            <p class="text-lg inline text-center">info@wideturn.com</p>
-          </div> -->
-        </div>
-        <div class="form-container">
-          <form action="" class="flex flex-col gap-3">
-            <div class="input-container">
-              <fieldset class="flex flex-col gap-1 w-[45%]">
-                <label for="name" class="text-2xl font-medium text-white"
-                  >Name</label
-                >
-                <input
-                  type="text"
-                  name="name"
-                  class="border-[2px] border-border rounded-md p-2 text-lg bg-white"
-                />
-              </fieldset>
-              <fieldset class="flex flex-col gap-1 w-[45%]">
-                <label for="emil" class="text-2xl font-medium text-white"
-                  >Email</label
-                >
-                <input
-                  type="email"
-                  name="emil"
-                  class="border-[2px] border-border rounded-md p-2 text-lg bg-white"
-                />
-              </fieldset>
-              <fieldset class="flex flex-col gap-1 w-[45%]">
-                <label for="phone" class="text-2xl font-medium text-white"
-                  >Phone</label
-                >
-                <input
-                  type="tel"
-                  name="phone"
-                  class="border-[2px] border-border rounded-md p-2 text-lg bg-white"
-                />
-              </fieldset>
-              <fieldset class="flex flex-col gap-1 w-[45%]">
-                <label for="services" class="text-2xl text-white font-medium"
-                  >Service</label
-                >
-                <input
-                  type="text"
-                  name="services"
-                  class="border-[2px] border-border rounded-md p-2 text-lg bg-white"
-                  placeholder="Expedited"
-                  disabled
-                />
-              </fieldset>
-            </div>
-            <fieldset class="fieldset-textarea">
-              <label for="description" class="text-2xl text-white font-medium"
-                >How can we Help?</label
+      <div class="form-container">
+        <form action="" class="flex flex-col gap-3">
+          <div class="input-container">
+            <fieldset class="flex flex-col gap-1 w-[45%]">
+              <label for="name" class="text-2xl font-medium text-white"
+                >Name</label
               >
-              <textarea
-                name="description"
-                id="description"
+              <input
+                type="text"
+                name="name"
                 class="border-[2px] border-border rounded-md p-2 text-lg bg-white"
-              ></textarea>
+              />
             </fieldset>
-            <button
-              class="py-4 px-9 bg-amber-500 font-bold text-2xl text-white rounded-lg"
+            <fieldset class="flex flex-col gap-1 w-[45%]">
+              <label for="emil" class="text-2xl font-medium text-white"
+                >Email</label
+              >
+              <input
+                type="email"
+                name="emil"
+                class="border-[2px] border-border rounded-md p-2 text-lg bg-white"
+              />
+            </fieldset>
+            <fieldset class="flex flex-col gap-1 w-[45%]">
+              <label for="phone" class="text-2xl font-medium text-white"
+                >Phone</label
+              >
+              <input
+                type="tel"
+                name="phone"
+                class="border-[2px] border-border rounded-md p-2 text-lg bg-white"
+              />
+            </fieldset>
+            <fieldset class="flex flex-col gap-1 w-[45%]">
+              <label for="services" class="text-2xl text-white font-medium"
+                >Service</label
+              >
+              <input
+                type="text"
+                name="services"
+                class="border-[2px] border-border rounded-md p-2 text-lg bg-white"
+                placeholder="Expedited"
+                disabled
+              />
+            </fieldset>
+          </div>
+          <fieldset class="fieldset-textarea">
+            <label for="description" class="text-2xl text-white font-medium"
+              >How can we Help?</label
             >
-              Send
-            </button>
-          </form>
-        </div>
+            <textarea
+              name="description"
+              id="description"
+              class="border-[2px] border-border rounded-md p-2 text-lg bg-white"
+            ></textarea>
+          </fieldset>
+          <button
+            class="py-4 px-9 bg-amber-500 font-bold text-2xl text-white rounded-lg"
+          >
+            Send
+          </button>
+        </form>
       </div>
     </div>
   </section>
@@ -120,10 +113,12 @@
   </script>
   <style>
     .info-container {
-      max-width: 50%;
+      max-width: 100%;
     }
     .container {
       display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
     .info-container a {
       color: white;
@@ -191,7 +186,7 @@
       flex-direction: column;
       gap: 20px;
       /* max-width: 900px; */
-      /* width: 100%; */
+      width: 100%;
     }
     h2 {
       font-size: 36px;
@@ -203,10 +198,9 @@
     }
 
     .form-container {
-      /* width: 100%; */
-
+      width: 100%;
       display: flex;
-      place-content: center;
+      /* place-content: center; */
     }
 
     section {
@@ -233,8 +227,20 @@
       }
     }
     @media screen and (min-width: 1000px) {
+      .info-container {
+        max-width: 50%;
+      }
       h2 {
         font-size: 56px;
+      }
+      .container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+      }
+      fieldset {
+        width: calc(50% - 15px);
       }
     }
     @media screen and (min-width: 1800px) {

@@ -1,0 +1,26 @@
+---
+const { SourceMap, text } = Astro.props;
+---
+
+<div class="choise-card">
+  <SourceMap heigth="50" fill="#fff" />
+  <p>{text}</p>
+</div>
+
+<style>
+  .choise-card p {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+  }
+  .choise-card {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .choise-card img {
+    height: 50px;
+  }
+</style>

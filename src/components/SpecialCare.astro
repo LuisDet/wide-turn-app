@@ -30,13 +30,19 @@ import Van from "../assets/Special Care Color Logo.png";
 
 <style>
   span {
-    color: #fcb900;
+    color: #1171a7;
   }
   .img-van {
-    width: 60%;
+    width: 100%;
   }
   .info-container {
+    margin-top: 20px;
+    margin-bottom: 60px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
   }
   section {
     margin-top: 40px;
@@ -51,17 +57,8 @@ import Van from "../assets/Special Care Color Logo.png";
   }
   .about p {
     align-self: center;
-    font-size: clamp(16px, 2vw, 28px);
+    font-size: clamp(18px, 1.5vw, 28px);
   }
-  /* .about-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  .about {
-    max-width: 550px;
-  } */
   @media screen and (min-width: 800px) {
     section {
       margin-inline: 60px;
@@ -69,28 +66,29 @@ import Van from "../assets/Special Care Color Logo.png";
     h2 {
       font-size: 64px;
     }
+    .info-container {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-inline: auto;
+      gap: 30px;
+      max-width: 80vw;
+    }
+    .img-van {
+      width: 40%;
+    }
   }
 
   @media screen and (min-width: 1000px) {
-    /* .container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+    .info-container {
+      margin-top: 60px;
       gap: 60px;
-      position: relative;
-    } */
-    /* .container::before {
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 3px;
-      background-color: #ccc;
-      border-radius: 50%;
-      left: 50%;
-      transform: translate(-50%);
-    } */
-
-    .choise-section {
-      /* width: calc(50% - 30px); */
+    }
+    .info-container p {
+      display: inline-block;
+    }
+    .img-van {
+      width: 50%;
     }
   }
 </style>

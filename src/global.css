@@ -1,18 +1,18 @@
 @font-face {
     font-family: "ITC Avant Garde Gothic Pro Book";
-    src: url("/fonts/ITC_Avant_Garde_Gothic_Pro-Book.woff") format("woff");
+    src: url("/wide-turn-app/fonts/ITC_Avant_Garde_Gothic_Pro-Book.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: "";
-    src: url("/fonts/ITC_Avant_Garde_Gothic_Pro-Bold.woff") format("woff");
+    font-family: "ITC Avant Garde Gothic Pro Bold";
+    src: url("/wide-turn-app/fonts/ITC_Avant_Garde_Gothic_Pro-Bold.woff") format("woff");
     font-weight: bold;
     font-style: bold;
 }
 @font-face {
     font-family: "ITC Avant Garde Gothic Pro Medium";
-    src: url("/fonts/ITC_Avant_Garde_Gothic_Pro-Medium.woff") format("woff");
+    src: url("/wide-turn-app/fonts/ITC_Avant_Garde_Gothic_Pro-Medium.woff") format("woff");
     font-weight: Medium;
     font-style: Medium;
 }

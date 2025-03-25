@@ -109,15 +109,28 @@ const bgImage = await getImage({ src: Van, format: "jpg" });
     padding-block: 10px;
     background-color: white;
     border-radius: 10px;
+    grid-column: span 2;
     /* border: 1px solid #ccc; */
   }
   .card-container {
+    /* width: 700px; */
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    /* gap: 20px;
     place-content: center;
-    /* margin-top: 40px; */
+    /* margin-top: 40px; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto; */
   }
+
+  .card:last-child {
+    grid-column: 2 / span 2;
+    /* justify-self: center;
+    grid-column-start: span 3; */
+  }
+
   .wrapper {
     margin-inline: 20px;
     /* max-width: 50%; */
@@ -145,21 +158,16 @@ const bgImage = await getImage({ src: Van, format: "jpg" });
     /* padding-block: 40px; */
     /* padding-bottom: 80px; */
   }
-  .card-container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-  }
-  .card:last-child {
-    justify-self: center;
-    grid-column-start: span 3;
-    width: auto;
-  }
   @media screen and (min-width: 800px) {
     .card-container {
       grid-template-columns: repeat(3, 1fr);
+      column-gap: 20px;
     }
-
+    .card {
+      grid-column: auto;
+    }
     .card:last-child {
+      grid-column: auto;
       justify-self: auto;
       grid-column-start: auto;
       width: auto;

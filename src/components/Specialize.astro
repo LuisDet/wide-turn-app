@@ -42,17 +42,17 @@ const bgImage = await getImage({ src: Van, format: "jpg" });
         <h2 class="">INDUSTRIES WE SERVE</h2>
         <div class="card-container">
           <div class="card">
-            <StethoscopeIcon width="50" fill="#FCB900" />
+            <StethoscopeIcon width="30" fill="#FCB900" />
             <!-- <img src="src/assets/flexibility.svg" alt="" width="100" /> -->
             <p class="card-info">HealthCare</p>
           </div>
           <div class="card">
-            <PillIcon width="50" fill="#FCB900" />
+            <PillIcon width="30" fill="#FCB900" />
             <!-- <img src="src/assets/flexibility.svg" alt="" width="100" /> -->
             <p class="card-info">Medical</p>
           </div>
           <div class="card">
-            <ManufactureIcon width="50" fill="#FCB900" />
+            <ManufactureIcon width="30" fill="#FCB900" />
             <!-- <img src="src/assets/flexibility.svg" alt="" width="100" /> -->
             <p class="card-info">Manufacturing</p>
           </div>
@@ -105,8 +105,8 @@ const bgImage = await getImage({ src: Van, format: "jpg" });
     justify-content: center;
     align-items: center;
     gap: 10px;
-    padding-inline: 20px;
-    padding-block: 15px;
+    padding-inline: 10px;
+    padding-block: 10px;
     background-color: white;
     border-radius: 10px;
     /* border: 1px solid #ccc; */
@@ -120,8 +120,8 @@ const bgImage = await getImage({ src: Van, format: "jpg" });
   }
   .wrapper {
     margin-inline: 20px;
-    max-width: 50%;
-    padding-block: 100px;
+    /* max-width: 50%; */
+    padding-block: 40px;
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -145,15 +145,24 @@ const bgImage = await getImage({ src: Van, format: "jpg" });
     /* padding-block: 40px; */
     /* padding-bottom: 80px; */
   }
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .card:last-child {
+    justify-self: center;
+    grid-column-start: span 3;
+    width: auto;
+  }
   @media screen and (min-width: 800px) {
     .card-container {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto;
+      grid-template-columns: repeat(3, 1fr);
     }
+
     .card:last-child {
-      justify-self: center;
-      grid-column-start: span 3;
-      width: calc(32.9% - 1rem);
+      justify-self: auto;
+      grid-column-start: auto;
+      width: auto;
     }
     .wrapper {
       margin-inline: 60px;
@@ -163,6 +172,9 @@ const bgImage = await getImage({ src: Van, format: "jpg" });
     }
   }
   @media screen and (min-width: 1000px) {
+    .wrapper {
+      max-width: 50%;
+    }
     h2 {
       font-size: 56px;
     }

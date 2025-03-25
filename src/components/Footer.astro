@@ -1,0 +1,97 @@
+---
+import LogoSVG from "../assets/Logo.svg";
+---
+
+<>
+  <footer>
+    <div class="container">
+      <div>
+        <img
+          src={LogoSVG.src}
+          alt="Logo"
+          width="200"
+          class="logo"
+          class="logo"
+        />
+      </div>
+      <div class="info-container">
+        <div class="info-card">
+          <h3>Contact Us</h3>
+          <div>
+            <p>info@wideturnlogistics.com</p>
+            <p>2114 N Flamingo Road #1450, Pembroke Pines, Fl 33028</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <h3>Wide Turn Logistics</h3>
+          <p>
+            We carry your loads safely from one place to another. From road to
+            air and sea freight, we’re here to make your shipping smooth,
+            reliable, and completely stress-free.
+          </p>
+        </div>
+      </div>
+    </div>
+    <p class="cpr">Copyright @ 2025. All Rights Reserved.</p>
+  </footer>
+</>
+
+<style>
+  footer {
+    padding-block: 32px;
+    color: white;
+    background-color: #282828;
+    padding-inline: 10vw;
+  }
+
+  h3 {
+    font-family: "ITC Avant Garde Gothic Pro Bold", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+  }
+
+  h3::before {
+    content: "";
+    width: 20%;
+    height: 3px;
+    position: absolute;
+    background-color: #fcb900;
+    bottom: -30%;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 800px) {
+    .info-container {
+      column-gap: 30px;
+      flex-direction: row;
+    }
+  }
+
+  .info-card {
+    max-width: 350px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    .container {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+  .cpr {
+    text-align: center;
+  }
+</style>

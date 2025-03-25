@@ -146,7 +146,9 @@ const bgImage = await getImage({ src: HeroImage, format: "jpg" });
       height: 150px;
       position: absolute;
       bottom: 0;
-      right: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      /* right: 10%; */
     }
 
     header {
@@ -259,6 +261,11 @@ const bgImage = await getImage({ src: HeroImage, format: "jpg" });
     }
 
     @media screen and (min-width: 800px) {
+      .fmcsa-logo {
+        left: auto;
+        transform: none;
+        right: 10%;
+      }
       .text-hero {
         padding-inline: 60px;
       }

@@ -7,7 +7,7 @@ import Van from "../assets/Special Care Color Logo.png";
     <div class="container">
       <div class="about-container">
         <div class="about">
-          <h2 class="">Special Care</h2>
+          <h2 class="">SPECIAL CARE</h2>
           <div class="info-container">
             <img src={Van.src} alt="" class="img-van" />
             <p class="">
@@ -30,6 +30,7 @@ import Van from "../assets/Special Care Color Logo.png";
 
 <style>
   span {
+    font-family: "ITC Avant Garde Gothic Pro Bold", sans-serif;
     color: #1171a7;
   }
   .img-van {
@@ -56,9 +57,19 @@ import Van from "../assets/Special Care Color Logo.png";
     text-align: center;
     margin: 0;
   }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .about p {
-    align-self: center;
+    /* align-self: ; */
+    align-self: flex-start;
     font-size: clamp(18px, 1.5vw, 28px);
+    margin: 0;
   }
   @media screen and (min-width: 800px) {
     section {
@@ -66,30 +77,49 @@ import Van from "../assets/Special Care Color Logo.png";
     }
     h2 {
       font-size: 64px;
+      align-self: flex-end;
     }
     .info-container {
-      flex-direction: row;
       justify-content: center;
       align-items: center;
       margin-inline: auto;
-      gap: 30px;
+      gap: 40px;
+      /* max-width: 80vw; */
+    }
+    .about {
       max-width: 80vw;
+      margin: auto;
     }
     .img-van {
-      width: 40%;
+      width: 60%;
     }
   }
 
   @media screen and (min-width: 1000px) {
     .info-container {
-      margin-top: 60px;
-      gap: 60px;
+      flex-direction: row;
     }
     .info-container p {
       display: inline-block;
+      margin-top: 20px;
     }
     .img-van {
       width: 50%;
+    }
+    section {
+      margin-top: 80px;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .info-container {
+      gap: 80px;
+    }
+  }
+
+  @media screen and (min-width: 2000px) {
+    .info-container {
+      gap: 180px;
     }
   }
 </style>

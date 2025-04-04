@@ -18,7 +18,9 @@ import LogoSVG from "../assets/Logo.svg";
         <div class="info-card">
           <h3>Contact Us</h3>
           <div>
-            <p>info@wideturnlogistics.com</p>
+            <a href="mailto:info@wideturnlogistics.com"
+              >info@wideturnlogistics.com</a
+            >
             <p>2114 N Flamingo Road #1450, Pembroke Pines, Fl 33028</p>
           </div>
         </div>
@@ -59,8 +61,11 @@ import LogoSVG from "../assets/Logo.svg";
     bottom: -30%;
   }
 
-  p {
+  p,
+  a {
     font-size: 16px;
+    color: inherit;
+    text-decoration: none;
   }
 
   .info-container {

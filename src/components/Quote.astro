@@ -26,93 +26,114 @@
       <div class="form-container">
         <p>
           Alternatively, you can fill out the form below, and we'll get back to
-          you as soon as possible to start working on a auote together.
+          you as soon as possible to start working on a quote together.
         </p>
-        <form
-          action="https://api.web3forms.com/submit"
-          method="POST"
-          class="flex flex-col gap-3"
-          id="form"
-        >
+        <form id="form">
           <input
             type="hidden"
             name="access_key"
             value="2303e22c-101f-410c-acde-aafb0b7f19e6"
           />
-          <input
-            type="hidden"
-            name="redirect"
-            value="http://localhost:4321/wide-turn-app#Quote"
-          />
 
           <div class="input-container">
-            <fieldset class="flex flex-col gap-1 w-[45%]">
-              <label for="name" class="text-2xl font-medium text-white"
-                >Name</label
-              >
-              <input
-                type="text"
-                name="name"
-                class="border-[2px] border-border rounded-md p-2 text-lg bg-white"
-              />
+            <fieldset>
+              <label for="name">Name</label>
+              <input type="text" name="name" />
             </fieldset>
-            <fieldset class="flex flex-col gap-1 w-[45%]">
-              <label for="emil" class="text-2xl font-medium text-white"
-                >Email</label
-              >
-              <input
-                type="email"
-                name="emil"
-                class="border-[2px] border-border rounded-md p-2 text-lg bg-white"
-              />
+            <fieldset>
+              <label for="emil">Email</label>
+              <input type="email" name="emil" />
             </fieldset>
-            <fieldset class="flex flex-col gap-1 w-[45%]">
-              <label for="phone" class="text-2xl font-medium text-white"
-                >Phone</label
-              >
-              <input
-                type="tel"
-                name="phone"
-                class="border-[2px] border-border rounded-md p-2 text-lg bg-white"
-              />
+            <fieldset>
+              <label for="phone">Phone</label>
+              <input type="tel" name="phone" />
             </fieldset>
-            <fieldset class="flex flex-col gap-1 w-[45%]">
-              <label for="services" class="text-2xl text-white font-medium"
-                >Service</label
-              >
+            <fieldset>
+              <label for="services">Service</label>
               <input
                 type="text"
                 name="services"
-                class="border-[2px] border-border rounded-md p-2 text-lg bg-white"
+                value="Expedited"
                 placeholder="Expedited"
                 disabled
               />
             </fieldset>
           </div>
           <fieldset class="fieldset-textarea">
-            <label for="description" class="text-2xl text-white font-medium"
-              >How can we Help?</label
-            >
-            <textarea
-              name="description"
-              id="description"
-              class="border-[2px] border-border rounded-md p-2 text-lg bg-white"
-            ></textarea>
+            <label for="description">How can we Help?</label>
+            <textarea name="description" id="description"></textarea>
           </fieldset>
-          <button
-            class="py-4 px-9 bg-amber-500 font-bold text-2xl text-white rounded-lg"
-          >
-            Send
-          </button>
+          <button> Send </button>
         </form>
       </div>
     </div>
+    <dialog id="favDialog"></dialog>
   </section>
   <script is:inline>
-    window.onload = function () {
-      // Reset the form fields when the page loads
-      document.getElementById("form").reset();
-    };
+    const form = document.getElementById("form");
+    const $checkForm = document.querySelector("dotlottie-player");
+    const $favDialog = document.getElementById("favDialog");
+    // const result = document.getElementById('result');
+
+    const text = `<dotlottie-player
+        src="https://lottie.host/53a5e3ef-072e-4598-b8c4-2a2ff7fb4576/cTtXst3cWS.lottie"
+        background="transparent"
+        speed="0.5"
+        style="width: 300px; height: 300px"
+        direction="1"
+        playMode="forward"
+        autoplay
+        id="check-form"></dotlottie-player>`;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      // Get the name input value
+      const name = formData.get("name");
+
+      // Create a custom subject
+      const subject = `${name} sent a message from website`;
+
+      // Append the custom subject to the form data
+      formData.append("subject", subject);
+
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+      // result.innerHTML = "Please wait...";
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      })
+        .then(async (response) => {
+          let json = await response.json();
+          if (response.status == 200) {
+            console.log(json.message);
+            // result.innerHTML = json.message;
+          } else {
+            console.log(response);
+            // result.innerHTML = json.message;
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+          // result.innerHTML = "Something went wrong!";
+        })
+        .then(function () {
+          form.reset();
+          $favDialog.showModal();
+          $favDialog.innerHTML = text;
+          setTimeout(() => {
+            $favDialog.close();
+          }, 2000);
+        });
+    });
   </script>
   <style>
     .email {

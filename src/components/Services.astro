@@ -1,5 +1,6 @@
 ---
-import VanImage from "../assets/Van-model2.png";
+// import VanImage from "../assets/Van-model2.png";
+import VanImage from "../assets/cargo-van.webp";
 import SpeedSVG from "../assets/speed.svg";
 import ReliabilitySVG from "../assets/reliability.svg";
 import EfficiencySVG from "../assets/Efficiency.svg";
@@ -9,12 +10,12 @@ import FlexibilitySVG from "../assets/flexibility.svg";
 <>
   <section class="" id="Services">
     <div class="wrapper">
-      <h2 class="">EXPEDITED FREIGHT</h2>
       <div class="container">
         <div class="img-container">
           <img src={VanImage.src} alt="" class="h-full" />
         </div>
         <div class="info-container">
+          <h2 class="">EXPEDITED FREIGHT</h2>
           <p class="text-service">
             When time is of the essence, Wide Turn Logistics is your trusted
             partner for fast, reliable, and efficient delivery.
@@ -30,7 +31,7 @@ import FlexibilitySVG from "../assets/flexibility.svg";
                 Why Choose Wide Turn Logistics for Expedited Freight?
               </p> -->
           <div class="services-feautures">
-            <div class="flex flex-col items-center">
+            <div>
               <img src={SpeedSVG.src} alt="" width="50" height="50" />
               <!-- <div class="bg-black w-[50px] h-[50px]"></div> -->
               <p class="feature-title">Speed</p>
@@ -38,7 +39,7 @@ import FlexibilitySVG from "../assets/flexibility.svg";
                 Deliveries in as little <br /> as 24 hours within Florida.
               </p>
             </div>
-            <div class="flex flex-col items-center">
+            <div>
               <img src={ReliabilitySVG.src} alt="" width="50" height="50" />
               <!-- <div class="bg-black w-[50px] h-[50px]"></div> -->
               <p class="feature-title">Reliability</p>
@@ -46,7 +47,7 @@ import FlexibilitySVG from "../assets/flexibility.svg";
                 Real-time tracking and updates <br />for complete peace of mind.
               </p>
             </div>
-            <div class="flex flex-col items-center">
+            <div>
               <img src={EfficiencySVG.src} alt="" width="50" height="50" />
               <!-- <div class="bg-black w-[50px] h-[50px]"></div> -->
               <p class="feature-title">Efficiency</p>
@@ -54,7 +55,7 @@ import FlexibilitySVG from "../assets/flexibility.svg";
                 Less handling means reduced<br /> risk of damage or delays.
               </p>
             </div>
-            <div class="flex flex-col items-center">
+            <div>
               <img src={FlexibilitySVG.src} alt="" width="50" height="50" />
               <!-- <div class="bg-black w-[50px] h-[50px]"></div> -->
               <p class="feature-title">Flexibility</p>
@@ -192,7 +193,7 @@ import FlexibilitySVG from "../assets/flexibility.svg";
     }
     h2 {
       font-size: 64px;
-      margin-bottom: 100px;
+      /* margin-bottom: 100px; */
     }
     .text-service {
       font-size: 32px;

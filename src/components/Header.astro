@@ -1,19 +1,17 @@
 ---
 import MenuIcon from "./svg/MenuIcon.astro";
-import HeroImage from "../assets/Van4.jpg";
+import HeroImage from "../assets/Van-hero.webp";
 import fmcsaSVG from "../assets/fmcsa.svg";
 import LogoSVG from "../assets/Logo.svg";
 import { getImage } from "astro:assets";
-const bgImage = await getImage({ src: HeroImage, format: "jpg" });
-
-// const backgroundUrl = `url(${HeroImage.src})`;
+const bgImage = await getImage({ src: HeroImage, format: "webp" });
 ---
 
 <>
-  <header class="flex flex-col max-h-screen h-full" id="Home">
-    <nav class="flex items-center px-28 sticky top-0 z-100 bg-white">
+  <header id="Home">
+    <nav>
       <div class="menu-container">
-        <a href="#" class="flex flex-col w-[30%]">
+        <a href="#">
           <img
             src={LogoSVG.src}
             alt="Logo"
@@ -26,27 +24,10 @@ const bgImage = await getImage({ src: HeroImage, format: "jpg" });
         <label for="btn-menu" class="btn-menu">
           <MenuIcon />
         </label>
-        <ul class="flex items-center w-[70%]">
-          <!-- <a
-            href="#Home"
-            class="p-8 relative hover:before:absolute hover:before:w-[75%] hover:before:h-[2px] hover:before:bg-amber-500 hover:before:rounded-md hover:before:bottom-7.5 hover:before:left-4.5"
-            ><li class="font-bold text-xl">Home</li></a
-          > -->
-          <a
-            href="#Services"
-            class="p-8 relative hover:before:absolute hover:before:w-[75%] hover:before:h-[2px] hover:before:bg-amber-500 hover:before:rounded-md hover:before:bottom-7.5 hover:before:left-4.5"
-            ><li class="font-medium text-xl">Services</li></a
-          >
-          <a
-            href="#about"
-            class="p-8 relative hover:before:absolute hover:before:w-[75%] hover:before:h-[2px] hover:before:bg-amber-500 hover:before:rounded-md hover:before:bottom-7.5 hover:before:left-4.5"
-            ><li class="font-medium text-xl">About Us</li></a
-          >
-          <a
-            href="#Quote"
-            class="p-8 relative hover:before:absolute hover:before:w-[75%] hover:before:h-[2px] hover:before:bg-amber-500 hover:before:rounded-md hover:before:bottom-7.5 hover:before:left-4.5"
-            ><li class="font-medium text-xl">Contant Us</li></a
-          >
+        <ul>
+          <a href="#Services"><li>Services</li></a>
+          <a href="#about"><li>About Us</li></a>
+          <a href="#Quote"><li>Contant Us</li></a>
         </ul>
       </div>
     </nav>
@@ -56,12 +37,8 @@ const bgImage = await getImage({ src: HeroImage, format: "jpg" });
         <a href="#Quote" class="">OUR SERVICES</a>
       </div>
       <img src={fmcsaSVG.src} alt="" class="fmcsa-logo" />
-      <!-- <div class="image-container"> -->
       <div class="bg-image" style={`background-image: url(${bgImage.src});`}>
-        <!-- <img src="src/assets/Van.png" alt="" class="hero_image" /> -->
-        <!-- </div> -->
       </div>
-      <!-- <div class="bg-image" HeroImage=`url(${HeroImage.src})`></div> -->
     </div>
   </header>
 

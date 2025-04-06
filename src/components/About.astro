@@ -1,5 +1,5 @@
 ---
-import Van from "../assets/AdobeStock_1139729176.png";
+import Van from "../assets/about-cargo-van.webp";
 ---
 
 <>
@@ -7,24 +7,26 @@ import Van from "../assets/AdobeStock_1139729176.png";
     <div class="container">
       <div class="about-container">
         <div class="about">
-          <h2 class="">ABOUT US</h2>
           <div class="info-container">
-            <p class="">
-              Your Trusted Partner in Freight and Transportation.
-              <br />
-              <br />
-              At <span>Wide Turn Logistics</span>, we're more than just a
-              trucking company we're your reliable partner in moving goods
-              efficiently, safely, and on time. As a third-party freight service
-              provider, we specialize in truckload services, specialized cargo
-              transport, and dedicated fleet.
-              <br />
-              <br />
-              Based in Florida, we're proud to serve local businesses and regional
-              partners with a focus on dry van loads, expedited shipping, and box
-              truck freight. While we're just starting our journey, our commitment
-              to excellence, customer satisfaction, and innovative logistics solutions.
-            </p>
+            <div class="info-text-container">
+              <h2 class="">ABOUT US</h2>
+              <p class="">
+                Your Trusted Partner in Freight and Transportation.
+                <br />
+                <br />
+                At <span>Wide Turn Logistics</span>, we're more than just a
+                trucking company we're your reliable partner in moving goods
+                efficiently, safely, and on time. As a third-party freight
+                service provider, we specialize in truckload services,
+                specialized cargo transport, and dedicated fleet.
+                <br />
+                <br />
+                Based in Florida, we're proud to serve local businesses and regional
+                partners with a focus on dry van loads, expedited shipping, and box
+                truck freight. While we're just starting our journey, our commitment
+                to excellence, customer satisfaction, and innovative logistics solutions.
+              </p>
+            </div>
             <img src={Van.src} alt="" class="img-van" />
           </div>
         </div>
@@ -49,6 +51,10 @@ import Van from "../assets/AdobeStock_1139729176.png";
     align-items: center;
     gap: 20px;
   }
+  .info-text-container {
+    display: flex;
+    flex-direction: column;
+  }
   section {
     margin-top: 40px;
     margin-inline: 20px;
@@ -58,6 +64,7 @@ import Van from "../assets/AdobeStock_1139729176.png";
     font-size: 32px;
     font-weight: 800;
     color: #1171a7;
+    text-align: center;
     margin: 0;
     /* margin-left: 180px; */
   }
@@ -77,7 +84,6 @@ import Van from "../assets/AdobeStock_1139729176.png";
     }
     h2 {
       font-size: 64px;
-      align-self: flex-start;
     }
     .info-container {
       justify-content: center;

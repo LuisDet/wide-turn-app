@@ -2,20 +2,27 @@
 import ManufactureIcon from "./svg/ManufactureIcon.astro";
 import PillIcon from "./svg/PillIcon.astro";
 import StethoscopeIcon from "./svg/StethoscopeIcon.astro";
-import ModernFleetIcon from "./svg/ModernFleetIcon.astro";
-import SafeFirstIcon from "./svg/SafeFirstIcon.astro";
-import FasterIcon from "./svg/FasterIcon.astro";
-import SatisfiedCustomerIcon from "./svg/SatisfiedCustomerIcon.astro";
-import InsuredCargoIcon from "./svg/InsuredCargoIcon.astro";
-import PriorityIcon from "./svg/PriorityIcon.astro";
+// import ModernFleetIcon from "./svg/ModernFleetIcon.astro";
+import ModernFleetIcon from "./svg/transparent/ModernFleetIcon.astro";
+// import SafeFirstIcon from "./svg/SafeFirstIcon.astro";
+import SafeFirstIcon from "./svg/transparent/SafeFirstIcon.astro";
+// import FasterIcon from "./svg/FasterIcon.astro";
+import FasterIcon from "./svg/transparent/FasterIcon.astro";
+// import SatisfiedCustomerIcon from "./svg/SatisfiedCustomerIcon.astro";
+import SatisfiedCustomerIcon from "./svg/transparent/SatisfiedCustomerIcon.astro";
+// import InsuredCargoIcon from "./svg/InsuredCargoIcon.astro";
+import InsuredCargoIcon from "./svg/transparent/InsuredCargoIcon.astro";
+// import PriorityIcon from "./svg/PriorityIcon.astro";
+import PriorityIcon from "./svg/transparent/PriorityIcon.astro";
 import SameDayIcon from "./svg/SameDayIcon.astro";
 import ChoiceCard from "./card/ChoiceCard.astro";
-import LocationIcon from "./svg/LocationIcon.astro";
+// import LocationIcon from "./svg/LocationIcon.astro";
+import LocationIcon from "./svg/transparent/LocationIcon.astro";
 
-import Van from "../assets/bg-2.jpg";
+import Van from "../assets/bg-2.webp";
 import { getImage } from "astro:assets";
 import PackageIcon from "./svg/PackageIcon.astro";
-const bgImage = await getImage({ src: Van, format: "jpg" });
+const bgImage = await getImage({ src: Van, format: "webp" });
 ---
 
 <>
@@ -42,24 +49,24 @@ const bgImage = await getImage({ src: Van, format: "jpg" });
         <h2 class="">INDUSTRIES WE SERVE</h2>
         <div class="card-container">
           <div class="card">
-            <StethoscopeIcon width="30" fill="#FCB900" />
+            <StethoscopeIcon width="50" fill="#FCB900" />
             <!-- <img src="src/assets/flexibility.svg" alt="" width="100" /> -->
             <p class="card-info">HealthCare</p>
           </div>
           <div class="card">
-            <PillIcon width="30" fill="#FCB900" />
+            <PillIcon width="50" fill="#FCB900" />
             <!-- <img src="src/assets/flexibility.svg" alt="" width="100" /> -->
             <p class="card-info">Medical</p>
           </div>
           <div class="card">
-            <ManufactureIcon width="30" fill="#FCB900" />
+            <ManufactureIcon width="50" fill="#FCB900" />
             <!-- <img src="src/assets/flexibility.svg" alt="" width="100" /> -->
             <p class="card-info">Manufacturing</p>
           </div>
           <div class="card">
-            <PackageIcon width="30" fill="#FCB900" />
+            <PackageIcon width="50" fill="#FCB900" />
             <!-- <img src="src/assets/flexibility.svg" alt="" width="100" /> -->
-            <p class="card-info">Goods</p>
+            <p class="card-info">General Goods</p>
           </div>
         </div>
       </div>
@@ -144,6 +151,7 @@ const bgImage = await getImage({ src: Van, format: "jpg" });
     display: flex;
     flex-direction: column;
     gap: 60px;
+    width: 100%;
   }
   h2 {
     font-family: "ITC Avant Garde Gothic Pro Bold", sans-serif;
@@ -184,6 +192,7 @@ const bgImage = await getImage({ src: Van, format: "jpg" });
       padding-inline: 30px;
       max-width: 300px;
       flex: 1;
+      grid-column: span 1;
     }
     h2 {
       font-size: 56px;

@@ -1,5 +1,5 @@
 ---
-import Van from "../assets/Special Care Color Logo.png";
+import Van from "../assets/Special Care Color Logo.webp";
 ---
 
 <>
@@ -7,20 +7,22 @@ import Van from "../assets/Special Care Color Logo.png";
     <div class="container">
       <div class="about-container">
         <div class="about">
-          <h2 class="">SPECIAL CARE</h2>
           <div class="info-container">
             <img src={Van.src} alt="" class="img-van" />
-            <p class="">
-              In <span>Wide Turn Logistics</span>, we are committed to take
-              special care in transporting delicate goods, ensuring they arrive
-              safely, securely, and in optimal condition.
-              <br />
-              <br />
-              Our specialized handling processes, climate-controlled transport, and
-              secure packaging solutions guarantee the integrity of every shipment
-              solutions, ensuring your shipments reach their destination with care
-              and precision
-            </p>
+            <div class="info-text-container">
+              <h2 class="">SPECIAL CARE</h2>
+              <p class="">
+                In <span>Wide Turn Logistics</span>, we are committed to take
+                special care in transporting delicate goods, ensuring they
+                arrive safely, securely, and in optimal condition.
+                <br />
+                <br />
+                Our specialized handling processes, climate-controlled transport,
+                and secure packaging solutions guarantee the integrity of every shipment
+                solutions, ensuring your shipments reach their destination with care
+                and precision
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -44,6 +46,10 @@ import Van from "../assets/Special Care Color Logo.png";
     justify-content: center;
     align-items: center;
     gap: 20px;
+  }
+  .info-text-container {
+    display: flex;
+    flex-direction: column;
   }
   section {
     margin-top: 40px;
@@ -77,7 +83,6 @@ import Van from "../assets/Special Care Color Logo.png";
     }
     h2 {
       font-size: 64px;
-      align-self: flex-end;
     }
     .info-container {
       justify-content: center;

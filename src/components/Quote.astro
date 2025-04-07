@@ -1,5 +1,5 @@
 ---
-
+import EmailIcon from "./svg/EmailIcon.astro";
 ---
 
 <>
@@ -20,8 +20,9 @@
           To), Weight, Pieces and any Special Care.
         </p>
         <a href="mailto:info@wideturnlogistics.com" class="email">
-          info@wideturnlogistics.com</a
-        >
+          <EmailIcon width="30" height="30" fill="white" />
+          info@wideturnlogistics.com
+        </a>
       </div>
       <div class="form-container">
         <p>
@@ -155,6 +156,7 @@
       justify-content: center;
       align-items: center;
       max-width: 100%;
+      row-gap: 30px;
     }
     .container {
       display: flex;
@@ -165,13 +167,18 @@
       color: white;
       font-size: clamp(16px, 2vw, 28px);
       text-decoration: none;
+      align-self: flex-start;
+      display: flex;
+      padding-inline: 20px;
+      column-gap: 15px;
     }
     .info-container h2 {
-      margin: 0;
+      margin-bottom: 40px;
     }
     p {
       color: white;
       font-size: clamp(16px, 2vw, 28px);
+      margin: 0;
     }
     button:hover {
       filter: brightness(110%);
@@ -211,7 +218,7 @@
     label {
       color: white;
       font-weight: 600;
-      font-size: 18px;
+      font-size: clamp(18px, 1vw, 24px);
     }
     fieldset {
       display: flex;
@@ -246,6 +253,7 @@
       width: 100%;
       display: flex;
       flex-direction: column;
+      row-gap: 80px;
     }
 
     section {

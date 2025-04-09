@@ -5,6 +5,7 @@ import SpeedSVG from "../assets/speed.svg";
 import ReliabilitySVG from "../assets/reliability.svg";
 import EfficiencySVG from "../assets/Efficiency.svg";
 import FlexibilitySVG from "../assets/flexibility.svg";
+import TitleText from "./header/TitleText.astro";
 ---
 
 <>
@@ -15,18 +16,20 @@ import FlexibilitySVG from "../assets/flexibility.svg";
           <img src={VanImage.src} alt="" class="h-full" />
         </div>
         <div class="info-container">
-          <h2 class="">EXPEDITED FREIGHT</h2>
-          <p class="text-service">
-            When time is of the essence, Wide Turn Logistics is your trusted
-            partner for fast, reliable, and efficient delivery.
-          </p>
-          <p class="text-service">
-            Our expedited freight service is designed to meet urgent deadlines
-            and customer demands, ensuring your shipments arrive exactly when
-            you need them-no delays, no excuses. Whether it's a last-minute
-            order or a time-sensitive delivery, we've got you covered with a
-            24-hour delivery timeframe across Florida.
-          </p>
+          <TitleText title="EXPEDITED FREIGHT" color="primaryColor" />
+          <div class="info-container-text">
+            <p class="text-service">
+              When time is of the essence, Wide Turn Logistics is your trusted
+              partner for fast, reliable, and efficient delivery.
+            </p>
+            <p class="text-service">
+              Our expedited freight service is designed to meet urgent deadlines
+              and customer demands, ensuring your shipments arrive exactly when
+              you need them-no delays, no excuses. Whether it's a last-minute
+              order or a time-sensitive delivery, we've got you covered with a
+              24-hour delivery timeframe across Florida.
+            </p>
+          </div>
           <!-- <p class="font-semibold text-2xl text-text-primary">
                 Why Choose Wide Turn Logistics for Expedited Freight?
               </p> -->
@@ -87,7 +90,7 @@ import FlexibilitySVG from "../assets/flexibility.svg";
   }
 
   .services-feautures {
-    margin-top: 40px;
+    /* margin-top: 40px; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
@@ -96,18 +99,9 @@ import FlexibilitySVG from "../assets/flexibility.svg";
   .text-service {
     font-size: 18px;
     color: #2e2e2e;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
-  h2 {
-    font-family: "ITC Avant Garde Gothic Pro Bold", sans-serif;
-    font-size: 36px;
-    font-weight: 800;
-    color: #1171a7;
-    text-align: center;
-    margin: 0;
-    margin-bottom: 40px;
-    align-self: flex-start;
-  }
+
   .wrapper {
     margin-inline: 20px;
     display: flex;
@@ -130,9 +124,6 @@ import FlexibilitySVG from "../assets/flexibility.svg";
     .wrapper {
       margin-inline: 60px;
     }
-    h2 {
-      font-size: 48px;
-    }
   }
 
   @media screen and (min-width: 1000px) {
@@ -152,19 +143,18 @@ import FlexibilitySVG from "../assets/flexibility.svg";
     .container > .img-container {
       grid-column: 2;
     }
-
+    .info-container-text {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
     .container > .info-container {
       grid-row: 1;
       grid-column: 1;
+      display: flex;
+      flex-direction: column;
+      row-gap: 60px;
     }
-    /* .info-container {
-      width: 50%;
-    }
-    .img-container {
-      width: 50%;
-      /* height: 50%; */
-    /* max-height: 100%; */
-    /* }  */
     .img-container img {
       position: absolute;
       top: 50%;
@@ -174,9 +164,6 @@ import FlexibilitySVG from "../assets/flexibility.svg";
     }
     .wrapper {
       margin-inline: 80px;
-    }
-    h2 {
-      font-size: 56px;
     }
     .feaure-text,
     .feature-title {
@@ -195,11 +182,8 @@ import FlexibilitySVG from "../assets/flexibility.svg";
   @media screen and (min-width: 1600px) {
     .wrapper {
       padding-inline: 200px;
-      padding-block: 100px;
-    }
-    h2 {
-      font-size: 64px;
-      margin-bottom: 60px;
+      padding-bottom: 100px;
+      /* padding-block: 100px; */
     }
     .text-service {
       font-size: 32px;

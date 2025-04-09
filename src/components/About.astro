@@ -1,5 +1,6 @@
 ---
 import Van from "../assets/about-cargo-van.webp";
+import TitleText from "./header/TitleText.astro";
 ---
 
 <>
@@ -9,7 +10,7 @@ import Van from "../assets/about-cargo-van.webp";
         <div class="about">
           <div class="info-container">
             <div class="info-text-container">
-              <h2 class="">ABOUT US</h2>
+              <TitleText title="ABOUT US" color="primaryColor" />
               <p class="">
                 Your Trusted Partner in Freight and Transportation.
                 <br />
@@ -60,15 +61,6 @@ import Van from "../assets/about-cargo-van.webp";
     margin-top: 40px;
     margin-inline: 20px;
   }
-  h2 {
-    font-family: "ITC Avant Garde Gothic Pro Bold", sans-serif;
-    font-size: 32px;
-    font-weight: 800;
-    color: #1171a7;
-    text-align: center;
-    margin: 0;
-    /* margin-left: 180px; */
-  }
   .about {
     display: flex;
     flex-direction: column;
@@ -82,9 +74,6 @@ import Van from "../assets/about-cargo-van.webp";
   @media screen and (min-width: 800px) {
     section {
       margin-inline: 60px;
-    }
-    h2 {
-      font-size: 64px;
     }
     .info-container {
       justify-content: center;

@@ -6,6 +6,7 @@ import ReliabilitySVG from "../assets/reliability.svg";
 import EfficiencySVG from "../assets/Efficiency.svg";
 import FlexibilitySVG from "../assets/flexibility.svg";
 import TitleText from "./header/TitleText.astro";
+import P1 from "./header/P1.astro";
 ---
 
 <>
@@ -18,17 +19,17 @@ import TitleText from "./header/TitleText.astro";
         <div class="info-container">
           <TitleText title="EXPEDITED FREIGHT" color="primaryColor" />
           <div class="info-container-text">
-            <p class="text-service">
+            <P1 color="textGray">
               When time is of the essence, Wide Turn Logistics is your trusted
               partner for fast, reliable, and efficient delivery.
-            </p>
-            <p class="text-service">
+            </P1>
+            <P1 color="textGray">
               Our expedited freight service is designed to meet urgent deadlines
               and customer demands, ensuring your shipments arrive exactly when
               you need them-no delays, no excuses. Whether it's a last-minute
               order or a time-sensitive delivery, we've got you covered with a
               24-hour delivery timeframe across Florida.
-            </p>
+            </P1>
           </div>
           <!-- <p class="font-semibold text-2xl text-text-primary">
                 Why Choose Wide Turn Logistics for Expedited Freight?
@@ -95,6 +96,7 @@ import TitleText from "./header/TitleText.astro";
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     text-align: center;
+    align-self: center;
   }
   .text-service {
     font-size: 18px;
@@ -119,6 +121,11 @@ import TitleText from "./header/TitleText.astro";
 
     overflow: hidden;
     /* padding-bottom: 250px; */
+  }
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
   }
   @media screen and (min-width: 800px) {
     .wrapper {
@@ -148,11 +155,9 @@ import TitleText from "./header/TitleText.astro";
       flex-direction: column;
       row-gap: 20px;
     }
-    .container > .info-container {
+    .info-container {
       grid-row: 1;
       grid-column: 1;
-      display: flex;
-      flex-direction: column;
       row-gap: 60px;
     }
     .img-container img {

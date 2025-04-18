@@ -1,6 +1,8 @@
 ---
+import P1 from "./header/P1.astro";
 import TitleText from "./header/TitleText.astro";
 import EmailIcon from "./svg/EmailIcon.astro";
+P1;
 ---
 
 <>
@@ -8,7 +10,7 @@ import EmailIcon from "./svg/EmailIcon.astro";
     <div class="container">
       <div class="info-container">
         <TitleText title="LET'S CONNECT" color="white" />
-        <p>
+        <P1 color="white">
           We'd love to hear from you! Whether you have a question, need
           assistance, or just want to schedule or expedite your load.
           <br />
@@ -19,17 +21,17 @@ import EmailIcon from "./svg/EmailIcon.astro";
           <br />
           Send us an email sharing the load's details including Zip Code (From -
           To), Weight, Pieces and any Special Care.
-        </p>
+        </P1>
         <a href="mailto:info@wideturnlogistics.com" class="email">
           <EmailIcon width="30" height="30" fill="white" />
           info@wideturnlogistics.com
         </a>
       </div>
       <div class="form-container">
-        <p>
+        <P1 color="white">
           Alternatively, you can fill out the form below, and we'll get back to
           you as soon as possible to start working on a quote together.
-        </p>
+        </P1>
         <form id="form">
           <input
             type="hidden"

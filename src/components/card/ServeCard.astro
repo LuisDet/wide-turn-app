@@ -1,0 +1,61 @@
+---
+const { Component, text } = Astro.props;
+---
+
+<div class="card">
+  <Component width="40" fill="#FCB900" />
+  <p class="card-info">{text}</p>
+</div>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-inline: 10px;
+    padding-block: 10px;
+    background-color: white;
+    border-radius: 10px;
+    grid-column: span 2;
+    width: 100%;
+  }
+
+  .card-info {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 800px) {
+    .card {
+      max-width: 300px;
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    .card {
+      max-width: 230px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .card {
+      max-width: 300px;
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    .card {
+      max-width: 400px;
+    }
+  }
+
+  @media screen and (min-width: 2200px) {
+    .card {
+      flex: 1;
+      grid-column: span 1;
+      max-width: 250px;
+    }
+  }
+</style>

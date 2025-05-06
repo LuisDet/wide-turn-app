@@ -1,9 +1,13 @@
+---
+import logo_og from "@assets/logo_og.png";
+---
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/wide-turn-app/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Wide Turn Logistics</title>
 
     <meta name="title" content="Wide Turn Logistics" />
@@ -21,11 +25,15 @@
       property="og:description"
       content="We're more than just a trucking company we're your reliable partner in moving goods efficiently, safely, and on time. As a third-party freight service provider, we specialize in truckload services, specialized cargo transport, and dedicated fleet."
     />
+    <meta property="og:image" itemprop="image" content={logo_og.src} />
     <meta
       property="og:image:secure_url"
       itemprop="image"
-      content="/wide-turn-app/favicon.svg"
+      content={logo_og.src}
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:image:type" content="image/jpeg" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -35,12 +43,8 @@
       property="twitter:description"
       content="We're more than just a trucking company we're your reliable partner in moving goods efficiently, safely, and on time. As a third-party freight service provider, we specialize in truckload services, specialized cargo transport, and dedicated fleet."
     />
-    <meta property="twitter:image" content="/wide-turn-app/favicon.svg" />
-    <link
-      rel="shortcut icon"
-      href="/wide-turn-app/favicon.svg"
-      type="image/x-icon"
-    />
+    <meta property="twitter:image" content={logo_og.src} />
+    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
 
     <script
       src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"

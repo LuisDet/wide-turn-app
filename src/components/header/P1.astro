@@ -1,6 +1,10 @@
 ---
 import { colors } from "../../constant/colors";
 
+interface Props {
+  color: keyof typeof colors;
+}
+
 const { color } = Astro.props;
 
 const textColor = colors[color];
@@ -13,8 +17,6 @@ const textColor = colors[color];
 <style define:vars={{ textColor }}>
   p {
     font-size: clamp(18px, 1.5vw, 32px);
-    /* font-size: 18px; */
-    /* font-size: 32px; */
     color: var(--textColor);
     align-self: flex-start;
     margin: 0;

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@lottiefiles/dotlottie-web": "^0.42.0",
-    "astro": "^5.4.2"
+    "astro": "^5.4.2",
+    "astro-tunnel": "^0.1.8"
   }
 }

@@ -1,5 +1,5 @@
 ---
-import LogoSVG from "../assets/Logo.svg";
+import LogoSVG from "@assets/Logo.svg";
 ---
 
 <>
@@ -33,7 +33,10 @@ import LogoSVG from "../assets/Logo.svg";
         </div>
       </div>
     </div>
-    <p class="cpr">Copyright @ 2025. All Rights Reserved.</p>
+    <p class="cpr">
+      <!-- <CopyRightIcon width="20" fill="white" className="bg-color" />  -->
+      &#169; 2025 Wide Turn Logistics. All Rights Reserved.
+    </p>
   </footer>
 </>
 
@@ -72,6 +75,15 @@ import LogoSVG from "../assets/Logo.svg";
     display: flex;
     flex-direction: column;
   }
+  .cpr {
+    display: flex;
+    justify-content: center;
+    column-gap: 2px;
+    align-items: flex-start;
+    margin: 0;
+    text-align: center;
+  }
+
   @media screen and (min-width: 800px) {
     .info-container {
       column-gap: 30px;
@@ -94,8 +106,8 @@ import LogoSVG from "../assets/Logo.svg";
       flex-direction: row;
       justify-content: space-evenly;
     }
-  }
-  .cpr {
-    text-align: center;
+    .cpr {
+      column-gap: 5px;
+    }
   }
 </style>

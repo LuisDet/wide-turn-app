@@ -1,7 +1,7 @@
 ---
-import Van from "../assets/Special Care Color Logo.webp";
-import P1 from "./header/P1.astro";
-import TitleText from "./header/TitleText.astro";
+import Van from "@assets/about-cargo-van.webp";
+import P1 from "@components/header/P1.astro";
+import Title from "@components/header/Title.astro";
 ---
 
 <>
@@ -10,21 +10,26 @@ import TitleText from "./header/TitleText.astro";
       <div class="about-container">
         <div class="about">
           <div class="info-container">
-            <img src={Van.src} alt="" class="img-van" />
             <div class="info-text-container">
-              <TitleText title="SPECIAL CARE" color="primaryColor" />
+              <Title color="primaryColor"> ABOUT US </Title>
               <P1 color="textGray">
-                In <span>Wide Turn Logistics</span>, we are committed to take
-                special care in transporting delicate goods, ensuring they
-                arrive safely, securely, and in optimal condition.
+                Your Trusted Partner in Freight and Transportation.
                 <br />
                 <br />
-                Our specialized handling processes, climate-controlled transport,
-                and secure packaging solutions guarantee the integrity of every shipment
-                solutions, ensuring your shipments reach their destination with care
-                and precision
+                At <span>Wide Turn Logistics</span>, we're more than just a
+                trucking company we're your reliable partner in moving goods
+                efficiently, safely, and on time. As a third-party freight
+                service provider, we specialize in truckload services,
+                specialized cargo transport, and dedicated fleet.
+                <br />
+                <br />
+                Based in Florida, we're proud to serve local businesses and regional
+                partners with a focus on dry van loads, expedited shipping, and box
+                truck freight. While we're just starting our journey, our commitment
+                to excellence, customer satisfaction, and innovative logistics solutions.
               </P1>
             </div>
+            <img src={Van.src} alt="" class="img-van" />
           </div>
         </div>
       </div>
@@ -34,17 +39,16 @@ import TitleText from "./header/TitleText.astro";
 
 <style>
   span {
-    font-family: "ITC Avant Garde Gothic Pro Bold", sans-serif;
     color: #fcb900;
+    font-family: "ITC Avant Garde Gothic Pro Bold", sans-serif;
   }
   .img-van {
     width: 100%;
   }
   .info-container {
     margin-top: 20px;
-    margin-bottom: 60px;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -58,19 +62,15 @@ import TitleText from "./header/TitleText.astro";
     margin-top: 40px;
     margin-inline: 20px;
   }
-
   .about {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
   .about p {
-    /* align-self: ; */
     align-self: flex-start;
     font-size: clamp(18px, 1.5vw, 28px);
-    margin: 0;
   }
   @media screen and (min-width: 800px) {
     section {
@@ -80,8 +80,7 @@ import TitleText from "./header/TitleText.astro";
       justify-content: center;
       align-items: center;
       margin-inline: auto;
-      gap: 40px;
-      /* max-width: 80vw; */
+      gap: 30px;
     }
     .about {
       max-width: 80vw;
@@ -95,16 +94,14 @@ import TitleText from "./header/TitleText.astro";
   @media screen and (min-width: 1000px) {
     .info-container {
       flex-direction: row;
+      gap: 40px;
     }
     .info-container p {
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 2.8%;
     }
     .img-van {
       width: 50%;
-    }
-    section {
-      margin-top: 80px;
     }
   }
 
@@ -116,7 +113,7 @@ import TitleText from "./header/TitleText.astro";
 
   @media screen and (min-width: 2000px) {
     .info-container {
-      gap: 180px;
+      gap: 120px;
     }
   }
 </style>

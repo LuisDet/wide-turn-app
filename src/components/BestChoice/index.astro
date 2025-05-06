@@ -1,0 +1,38 @@
+---
+import {
+  ModernFleetTransparent,
+  SafeFirstTransparent,
+  FasterTransparent,
+  SatisfiedCustomerTransparent,
+  InsuredCargoTransparent,
+  PriorityTransparent,
+  SameDayIcon,
+  LocationTransparent,
+} from "@icons/index";
+
+import ChoiceCard from "@components/card/ChoiceCard.astro";
+
+const bestChoice = [
+  { component: ModernFleetTransparent, text: "MODERN FLEET" },
+  { component: SafeFirstTransparent, text: "SAFETY OPS" },
+  { component: FasterTransparent, text: "FASTER DELIVERY" },
+  { component: SatisfiedCustomerTransparent, text: "TAILORED SERVICE" },
+  { component: InsuredCargoTransparent, text: "CARGO INSURED" },
+  { component: PriorityTransparent, text: "URGENCY" },
+  { component: SameDayIcon, text: "SAME DAY" },
+  { component: LocationTransparent, text: "LOAD TRACKING" },
+];
+---
+
+<div class="choise-container">
+  {bestChoice.map((i) => <ChoiceCard as={i.component} text={i.text} />)}
+</div>
+
+<style>
+  .choise-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 1000px;
+  }
+</style>

@@ -1,13 +1,17 @@
 ---
 import { colors } from "../../constant/colors";
 
-const { title, color } = Astro.props;
+interface Props {
+  color: keyof typeof colors;
+}
+
+const { color } = Astro.props;
 
 const textColor = colors[color];
 ---
 
 <h2>
-  {title}
+  <slot />
 </h2>
 
 <style define:vars={{ textColor }}>
@@ -18,7 +22,5 @@ const textColor = colors[color];
     color: var(--textColor);
     text-align: center;
     margin: 0;
-    /* margin-bottom: 40px; */
-    /* align-self: flex-start; */
   }
 </style>

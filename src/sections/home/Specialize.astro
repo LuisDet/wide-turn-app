@@ -1,0 +1,96 @@
+---
+import Van from "@assets/bg-2.webp";
+import { getImage } from "astro:assets";
+import Title from "@components/header/Title.astro";
+import BestChoice from "@components/BestChoice/index.astro";
+import IndustriesServe from "@components/IndustriesServe/index.astro";
+
+const bgImage = await getImage({ src: Van, format: "webp" });
+---
+
+<>
+  <section>
+    <div class="bg-2" style={`background-image: url(${bgImage.src});`}></div>
+    <div class="wrapper">
+      <div class="choice-section">
+        <Title color="white">YOUR BEST CHOICE, EVERY TIME</Title>
+        <BestChoice />
+      </div>
+      <div class="serve-section">
+        <Title color="white">INDUSTRIES WE SERVE</Title>
+        <IndustriesServe />
+      </div>
+    </div>
+  </section>
+</>
+
+<style>
+  .choice-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .serve-section {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .bg-2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-height: 100%;
+    height: 900px;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .wrapper {
+    margin-inline: 20px;
+    padding-block: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 100%;
+  }
+  section {
+    display: flex;
+    justify-content: end;
+    position: relative;
+  }
+  @media screen and (min-width: 800px) {
+    .wrapper {
+      margin-inline: 60px;
+      gap: 20px;
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    .wrapper {
+      max-width: 50%;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .wrapper {
+      margin-inline: 100px;
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    .wrapper {
+      padding-block: 100px;
+      gap: 50px;
+    }
+  }
+
+  @media screen and (min-width: 2200px) {
+    .wrapper {
+      padding-block: 100px;
+      gap: 100px;
+    }
+  }
+</style>

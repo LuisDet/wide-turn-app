@@ -1,12 +1,12 @@
 ---
 // import VanImage from "../assets/Van-model2.png";
-import VanImage from "../assets/cargo-van.webp";
-import SpeedSVG from "../assets/speed.svg";
-import ReliabilitySVG from "../assets/reliability.svg";
-import EfficiencySVG from "../assets/Efficiency.svg";
-import FlexibilitySVG from "../assets/flexibility.svg";
-import TitleText from "./header/TitleText.astro";
-import P1 from "./header/P1.astro";
+import VanImage from "@assets/cargo-van.webp";
+import SpeedSVG from "@assets/speed.svg";
+import ReliabilitySVG from "@assets/reliability.svg";
+import EfficiencySVG from "@assets/Efficiency.svg";
+import FlexibilitySVG from "@assets/flexibility.svg";
+import Title from "@components/header/Title.astro";
+import P1 from "@components/header/P1.astro";
 ---
 
 <>
@@ -17,7 +17,7 @@ import P1 from "./header/P1.astro";
           <img src={VanImage.src} alt="" class="h-full" />
         </div>
         <div class="info-container">
-          <TitleText title="EXPEDITED FREIGHT" color="primaryColor" />
+          <Title color="primaryColor">EXPEDITED FREIGHT</Title>
           <div class="info-container-text">
             <P1 color="textGray">
               When time is of the essence, Wide Turn Logistics is your trusted
@@ -40,7 +40,8 @@ import P1 from "./header/P1.astro";
               <!-- <div class="bg-black w-[50px] h-[50px]"></div> -->
               <p class="feature-title">Speed</p>
               <p class="feaure-text">
-                Deliveries in as little <br /> as 24 hours within Florida.
+                Deliveries in as little as 24 hours within a 600 miles radius
+                from Pick Up location.
               </p>
             </div>
             <div>
@@ -48,7 +49,7 @@ import P1 from "./header/P1.astro";
               <!-- <div class="bg-black w-[50px] h-[50px]"></div> -->
               <p class="feature-title">Reliability</p>
               <p class="feaure-text">
-                Real-time tracking and updates <br />for complete peace of mind.
+                Real-time tracking and updates for complete peace of mind.
               </p>
             </div>
             <div>
@@ -56,7 +57,7 @@ import P1 from "./header/P1.astro";
               <!-- <div class="bg-black w-[50px] h-[50px]"></div> -->
               <p class="feature-title">Efficiency</p>
               <p class="feaure-text">
-                Less handling means reduced<br /> risk of damage or delays.
+                Less handling means reduced risk of damage or delays.
               </p>
             </div>
             <div>
@@ -64,7 +65,7 @@ import P1 from "./header/P1.astro";
               <!-- <div class="bg-black w-[50px] h-[50px]"></div> -->
               <p class="feature-title">Flexibility</p>
               <p class="feaure-text">
-                Tailored solutions to meet <br />your unique shipping needs.
+                Tailored solutions to meet your unique shipping needs.
               </p>
             </div>
           </div>
@@ -83,7 +84,7 @@ import P1 from "./header/P1.astro";
   .container {
     display: flex;
     flex-direction: column-reverse;
-    gap: 40px;
+    row-gap: 60px;
   }
 
   .feature-title {
@@ -91,17 +92,24 @@ import P1 from "./header/P1.astro";
   }
 
   .services-feautures {
-    /* margin-top: 40px; */
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 40px;
     text-align: center;
-    align-self: center;
   }
+
+  .services-feautures div {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    align-items: center;
+    margin: auto;
+  }
+
   .text-service {
     font-size: 18px;
     color: #2e2e2e;
-    /* margin-bottom: 20px; */
   }
 
   .wrapper {
@@ -127,9 +135,27 @@ import P1 from "./header/P1.astro";
     flex-direction: column;
     row-gap: 30px;
   }
+
+  .info-container-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
   @media screen and (min-width: 800px) {
     .wrapper {
       margin-inline: 60px;
+    }
+    .services-feautures div {
+      max-width: 70%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+      align-items: center;
+      margin: auto;
+    }
+    .services-feautures {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -149,11 +175,6 @@ import P1 from "./header/P1.astro";
     }
     .container > .img-container {
       grid-column: 2;
-    }
-    .info-container-text {
-      display: flex;
-      flex-direction: column;
-      row-gap: 20px;
     }
     .info-container {
       grid-row: 1;

@@ -1,7 +1,7 @@
 ---
-import P1 from "./header/P1.astro";
-import TitleText from "./header/TitleText.astro";
-import EmailIcon from "./svg/EmailIcon.astro";
+import P1 from "@components/header/P1.astro";
+import Title from "@components/header/Title.astro";
+import EmailIcon from "@icons/EmailIcon.astro";
 P1;
 ---
 
@@ -9,7 +9,7 @@ P1;
   <section id="Quote">
     <div class="container">
       <div class="info-container">
-        <TitleText title="LET'S CONNECT" color="white" />
+        <Title color="white">LET'S CONNECT</Title>
         <P1 color="white">
           We'd love to hear from you! Whether you have a question, need
           assistance, or just want to schedule or expedite your load.
@@ -36,7 +36,7 @@ P1;
           <input
             type="hidden"
             name="access_key"
-            value="2303e22c-101f-410c-acde-aafb0b7f19e6"
+            value="b41981bb-1d4f-4f3c-8e8b-d027769c0cb4"
           />
 
           <div class="input-container">
@@ -156,7 +156,7 @@ P1;
     .info-container {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      /* justify-content: center; */
       align-items: center;
       max-width: 100%;
       row-gap: 30px;
@@ -168,10 +168,12 @@ P1;
     }
     .info-container a {
       color: white;
-      font-size: clamp(16px, 2vw, 28px);
+      font-size: clamp(16px, 1.2vw, 22px);
       text-decoration: none;
       align-self: flex-start;
       display: flex;
+      justify-content: center;
+      align-items: center;
       padding-inline: 20px;
       column-gap: 15px;
     }
@@ -262,7 +264,7 @@ P1;
     section {
       background-color: #1171a7;
       padding-inline: 20px;
-      padding-block: 100px;
+      padding-block: 50px;
     }
     @media screen and (min-width: 800px) {
       .input-container {

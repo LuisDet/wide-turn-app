@@ -1,0 +1,183 @@
+---
+import LogoSVG from "@assets/Logo.svg";
+import MenuIcon from "@icons/MenuIcon.astro";
+---
+
+<nav>
+  <div class="menu-container">
+    <a href="#">
+      <img
+        src={LogoSVG.src}
+        alt="Logo Wide Turn Logistcs"
+        width="100"
+        class="logo"
+        class="logo"
+      />
+    </a>
+    <input type="checkbox" name="btn-menu" id="btn-menu" />
+    <label for="btn-menu" class="btn-menu">
+      <MenuIcon />
+    </label>
+    <ul>
+      <a href="#Services"><li>Services</li></a>
+      <a href="#about"><li>About Us</li></a>
+      <a href="#Quote"><li>Contact Us</li></a>
+    </ul>
+  </div>
+</nav>
+
+<script is:inline>
+  const btn = document.querySelectorAll("ul");
+  const inputCheckbox = document.querySelector("#btn-menu");
+  btn.forEach((item) => {
+    item.addEventListener("click", () => {
+      inputCheckbox.checked = false;
+    });
+  });
+</script>
+
+<style>
+  .menu-container {
+    width: calc(100% - 40px);
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #dcdcdc;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    z-index: 999;
+  }
+  ul {
+    height: 100%;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    flex-direction: column;
+    display: none;
+    justify-content: flex-end;
+    gap: 20px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  ul > a {
+    width: 100%;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+    padding: 3px;
+    position: relative;
+  }
+  ul > a:hover::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 75%;
+    background-color: #fcb900;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #btn-menu {
+    display: none;
+  }
+
+  #btn-menu:checked ~ ul {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+    cursor: pointer;
+  }
+  .menu-container:has(#btn-menu:checked) {
+    flex-direction: column;
+  }
+  #btn-menu:checked ~ nav {
+    display: none;
+  }
+
+  .btn-menu {
+    cursor: pointer;
+  }
+
+  #btn-menu:checked ~ .btn-menu {
+    display: none;
+  }
+
+  @media screen and (min-width: 800px) {
+    .menu-container {
+      width: calc(100% - 140px);
+    }
+
+    nav {
+      padding-block: 20px;
+      padding-inline: 60px;
+    }
+
+    ul > a {
+      font-size: 18px;
+    }
+
+    ul {
+      gap: 20px;
+      margin: 0;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    #btn-menu,
+    .btn-menu {
+      display: none;
+    }
+
+    .menu-container {
+      width: calc(100% - 270px);
+      padding-inline: 40px;
+    }
+
+    nav {
+      padding-block: 20px;
+      padding-inline: 100px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+    }
+
+    ul > a {
+      width: auto;
+    }
+  }
+
+  @media screen and (min-width: 1800px) {
+    .menu-container {
+      width: calc(100% - 310px);
+      padding: 20px;
+      padding-inline: 60px;
+    }
+
+    .logo {
+      width: 140px;
+    }
+
+    ul > a {
+      font-size: 24px;
+    }
+  }
+</style>
